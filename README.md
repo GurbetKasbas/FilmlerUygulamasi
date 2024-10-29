@@ -6,7 +6,8 @@ Detaylı GridView Film Uygulaması
 ## Ekran Görüntüleri
 
 ### Film Listesi
-![Film Listesi](assets/images/readme1.png)
+<img src="https://github.com/GurbetKasbas/FilmlerUygulamasi/blob/master/assets/images/readme1.png" width="350" heigth="500" /> 
 
 ### Film Detayları
-![Film Detayları](assets/images/readme2.png)
+<img src="https://github.com/GurbetKasbas/FilmlerUygulamasi/blob/master/assets/images/readme2.png" width="350" heigth="500" /> 
+
