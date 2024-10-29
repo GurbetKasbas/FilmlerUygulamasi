@@ -1,3 +1,4 @@
+import 'package:filmuygulamasi/film_detay.dart';
 import 'package:filmuygulamasi/filmler.dart';
 import 'package:flutter/material.dart';
 
@@ -56,15 +57,20 @@ class _FilmlerListesiState extends State<FilmlerListesi> {
                 var film = filmListesi[index];
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    color: const Color.fromARGB(255, 230, 226, 226),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Image.asset("assets/images/${film.film_resim_adi}"),
-                        Text("${film.film_adi} " , style:const  TextStyle(fontWeight: FontWeight.bold),),
-                        Text("${film.film_fiyat}" , style:const TextStyle(fontWeight: FontWeight.bold , color: Colors.red),),
-                      ],
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => FilmDetay(film: film,),));
+                    },
+                    child: Card(
+                      color: const Color.fromARGB(255, 230, 226, 226),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset("assets/images/${film.film_resim_adi}"),
+                          Text("${film.film_adi} " , style:const  TextStyle(fontWeight: FontWeight.bold),),
+                          Text("${film.film_fiyat}" , style:const TextStyle(fontWeight: FontWeight.bold , color: Colors.red),),
+                        ],
+                      ),
                     ),
                   ),
                 );
